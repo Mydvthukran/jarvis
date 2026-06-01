@@ -28,6 +28,7 @@ body {
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 42px 42px;
+  -webkit-mask-image: radial-gradient(circle, black 45%, transparent 95%);
   mask-image: radial-gradient(circle, black 45%, transparent 95%);
   pointer-events: none;
 }

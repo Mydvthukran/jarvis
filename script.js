@@ -21,7 +21,10 @@ function appendLine(text) {
 }
 
 function sanitizeCommand(value) {
-  return value.replace(/[^\x20-\x7E]/g, "").slice(0, MAX_COMMAND_LENGTH);
+  return value
+    .replace(/[^\x20-\x7E]/g, "")
+    .replace(/[<>&"'`]/g, "")
+    .slice(0, MAX_COMMAND_LENGTH);
 }
 
 form.addEventListener("submit", (event) => {
