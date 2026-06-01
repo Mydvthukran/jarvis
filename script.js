@@ -10,7 +10,11 @@ function tick() {
 
 function appendLine(text) {
   const p = document.createElement("p");
-  p.innerHTML = `<span class="prompt">jarvis@local:</span> ${text}`;
+  const prompt = document.createElement("span");
+  prompt.className = "prompt";
+  prompt.textContent = "jarvis@local:";
+  p.appendChild(prompt);
+  p.appendChild(document.createTextNode(` ${text}`));
   consoleEl.appendChild(p);
   consoleEl.scrollTop = consoleEl.scrollHeight;
 }
