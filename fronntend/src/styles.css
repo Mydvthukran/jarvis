@@ -21,6 +21,10 @@ body {
   overflow: hidden;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 .hud-grid {
   position: fixed;
   inset: 0;
