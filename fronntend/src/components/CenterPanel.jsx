@@ -54,6 +54,10 @@ export default function CenterPanel() {
             <span className="prompt">jarvis@local:</span> {line}
           </p>
         ))}
+        <p>
+          <span className="prompt">jarvis@local:</span>
+          <span className="cursor"></span>
+        </p>
       </div>
       <form className="command-form" onSubmit={handleSubmit}>
         <input
